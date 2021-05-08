@@ -10,3 +10,6 @@ It comes with the following custom bits:
  - Response helper to make it easier to write responses.
 
 It's built to use with composer, Slim 4, Monolog (or other PSR-3 interface).
+
+I have a template implementation for using these libraries here:
+https://github.com/etu/etu-slim-skeleton
