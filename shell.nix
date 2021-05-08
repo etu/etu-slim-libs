@@ -8,5 +8,8 @@ in pkgs.mkShell {
     # Install PHP and composer
     php'
     php'.packages.composer
+
+    # Install nodejs for PHP LSP to work
+    pkgs.nodejs
   ];
 }
