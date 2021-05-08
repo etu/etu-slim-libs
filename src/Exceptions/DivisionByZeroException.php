@@ -25,7 +25,7 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
-class DivisionByZeroException extends ContextAwareException
+final class DivisionByZeroException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {

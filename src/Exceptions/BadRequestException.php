@@ -25,7 +25,7 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
-class BadRequestException extends ContextAwareException
+final class BadRequestException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
