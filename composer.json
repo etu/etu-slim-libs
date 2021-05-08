@@ -1,0 +1,24 @@
+{
+    "name": "etu/slim-libs",
+    "description": "An opinionated set of libraries for using Slim Framework 4 that has some care and thought put into error handling and logging.",
+    "homepage": "https://github.com/etu/etu-slim-libs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Elis Hirwing",
+            "email": "elis@hirwing.se",
+            "homepage": "https://elis.nu/"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "psr/http-message": "^1.0",
+        "slim/psr7": "^1.4",
+        "slim/slim": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Etu\\Slim\\": "src/"
+        }
+    }
+}
