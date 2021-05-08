@@ -60,7 +60,7 @@ class HttpErrorHandler extends SlimErrorHandler
         }
 
         // Set status codes based on exception types
-        $statusCode = match (get_class($exception)) {
+        $statusCode = match(get_class($exception)) {
             HttpBadRequestException::class => 400,
             HttpUnauthorizedException::class => 401,
             HttpForbiddenException::class => 403,
@@ -97,7 +97,7 @@ class HttpErrorHandler extends SlimErrorHandler
 
     protected function replaceException(object $exception): object
     {
-        return match (get_class($exception)) {
+        return match(get_class($exception)) {
             DivisionByZeroError::class => new DivisionByZeroException($exception->getMessage(), [], $exception),
             ParseError::class => new ParseException($exception->getMessage(), [], $exception),
             Error::class => new InternalServerErrorException($exception->getMessage(), [], $exception),
