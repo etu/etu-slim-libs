@@ -51,7 +51,7 @@ class ShutdownHandler
             $message = 'An error while processing your request. Please try again later.';
 
             if ($this->displayErrorDetails) {
-                $message = match($error['type']) {
+                $message = match ($error['type']) {
                     E_USER_ERROR => 'FATAL ERROR: {errorMessage}. on line {errorLine} in file {errorFile}.',
                     E_USER_WARNING => 'WARNING: {errorMessage}. on line {errorLine} in file {errorFile}.',
                     E_USER_NOTICE => 'NOTICE: {errorMessage}. on line {errorLine} in file {errorFile}.',
@@ -60,7 +60,7 @@ class ShutdownHandler
             }
 
             // Select exception type by message
-            $exceptionType = match(true) {
+            $exceptionType = match (true) {
                 (strpos($error['message'], 'Allowed memory size of') !== false) => OutOfMemoryException::class,
                 default => InternalServerErrorException::class,
             };
