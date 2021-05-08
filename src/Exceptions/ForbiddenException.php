@@ -25,6 +25,9 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * ForbiddenException will log with context at INFO level and return a "403 Forbidden" to the client.
+ */
 final class ForbiddenException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

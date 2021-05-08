@@ -24,6 +24,9 @@ namespace Etu\Slim\Helpers;
 
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Responses contains helper methods (withData() and withError()) to write json data to PSR-7 response interfaces.
+ */
 class Responses
 {
     /**

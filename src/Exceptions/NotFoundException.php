@@ -25,6 +25,9 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * NotFoundException will log with context at WARNING level and return a "404 Not Found" to the client.
+ */
 final class NotFoundException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

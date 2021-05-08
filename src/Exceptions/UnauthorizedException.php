@@ -25,6 +25,9 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * UnauthorizedException will log with context at NOTICE level and return a "401 Unauthorized" to the client.
+ */
 final class UnauthorizedException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

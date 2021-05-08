@@ -25,6 +25,9 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * BadRequestException will log with context at INFO level and return a "400 Bad Request" to the client.
+ */
 final class BadRequestException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

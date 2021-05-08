@@ -25,6 +25,10 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * InternalServerErrorException will log with context at ERROR level and return a "500 Internal Server Error" to the
+ * client.
+ */
 final class InternalServerErrorException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

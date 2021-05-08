@@ -27,6 +27,11 @@ use Etu\Slim\Exceptions\OutOfMemoryException;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\ResponseEmitter;
 
+/**
+ * A custom Shutdown Handler to handle the nasty kinds of errors.
+ *
+ * It uses the custom error handler to log the errors properly.
+ */
 class ShutdownHandler
 {
     private Request $request;

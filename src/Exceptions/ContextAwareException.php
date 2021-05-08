@@ -27,6 +27,10 @@ use Monolog\Processor\PsrLogMessageProcessor;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * ContextAwareException is my base class for Exceptions that adds the concept of contexts used by PSR-3 logging to
+ * Exception. This is to greatly improve the logging of exceptions and to return reasonable status codes.
+ */
 abstract class ContextAwareException extends Exception
 {
     private string $logLevel;

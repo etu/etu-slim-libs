@@ -25,6 +25,9 @@ namespace Etu\Slim\Exceptions;
 use Psr\Log\LogLevel;
 use Throwable;
 
+/**
+ * ParseException will log with context at WARNING level and return a "500 Internal Server Error" to the client.
+ */
 final class ParseException extends ContextAwareException
 {
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)

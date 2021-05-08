@@ -41,6 +41,16 @@ use Slim\Exception\HttpNotImplementedException;
 use Slim\Exception\HttpUnauthorizedException;
 use Slim\Handlers\ErrorHandler as SlimErrorHandler;
 
+/**
+ * A custom Error Handler based on the one shipped with Slim, but it does a few things differently.
+ *
+ * For once: It always responds in json format.
+ *
+ * Then it always tries to map a proper class for different kinds of errors.
+ *
+ * It also logs to monolog with the proper log level depending on exception depending on error and logs with context
+ * that was part of triggering the error.
+ */
 class HttpErrorHandler extends SlimErrorHandler
 {
     protected function respond(): Response

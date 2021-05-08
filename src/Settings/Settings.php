@@ -22,6 +22,9 @@ declare(strict_types=1);
 
 namespace Etu\Slim\Settings;
 
+/**
+ * Simple implementation of having a class to store settings in and reading them from this class.
+ */
 class Settings implements SettingsInterface
 {
     /**
