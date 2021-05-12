@@ -29,6 +29,9 @@ in pkgs.mkShell {
       };
     }))
 
+    # Install phpstan
+    php'.packages.phpstan
+
     # Install yaml lint
     pkgs.yamllint
 
