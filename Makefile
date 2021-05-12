@@ -1,3 +1,6 @@
+composer-validate:
+	composer validate
+
 phpcbf:
 	phpcbf --standard=PSR12 src/
 

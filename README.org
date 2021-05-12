@@ -1,4 +1,5 @@
 [[https://github.com/etu/etu-slim-libs/actions/workflows/codestyle.yml][https://github.com/etu/etu-slim-libs/actions/workflows/codestyle.yml/badge.svg]]
+[[https://github.com/etu/etu-slim-libs/actions/workflows/composer.yml][https://github.com/etu/etu-slim-libs/actions/workflows/composer.yml/badge.svg]]
 
 * Etu’s Slim Framework 4 helper libraries
 This is an opinionated set of libraries for using Slim Framework 4 that has
