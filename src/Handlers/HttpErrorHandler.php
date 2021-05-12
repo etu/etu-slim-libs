@@ -40,6 +40,7 @@ use Slim\Exception\HttpNotFoundException;
 use Slim\Exception\HttpNotImplementedException;
 use Slim\Exception\HttpUnauthorizedException;
 use Slim\Handlers\ErrorHandler as SlimErrorHandler;
+use Throwable;
 
 /**
  * A custom Error Handler based on the one shipped with Slim, but it does a few things differently.
@@ -105,7 +106,7 @@ class HttpErrorHandler extends SlimErrorHandler
         $this->logger->log($logLevel, $exception->getMessage(), $context);
     }
 
-    protected function replaceException(object $exception): object
+    protected function replaceException(Throwable $exception): Throwable
     {
         return match (get_class($exception)) {
             DivisionByZeroError::class => new DivisionByZeroException($exception->getMessage(), [], $exception),
