@@ -29,6 +29,9 @@ in pkgs.mkShell {
       };
     }))
 
+    # Install yaml lint
+    pkgs.yamllint
+
     # Install nodejs for PHP LSP to work
     pkgs.nodejs
   ];
