@@ -28,13 +28,13 @@ namespace Etu\Slim\Settings;
 class Settings implements SettingsInterface
 {
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     private $settings;
 
     /**
      * Settings constructor.
-     * @param array $settings
+     * @param array<string, mixed> $settings
      */
     public function __construct(array $settings)
     {

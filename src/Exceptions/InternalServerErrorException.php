@@ -31,6 +31,9 @@ use Throwable;
  */
 final class InternalServerErrorException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 500, LogLevel::ERROR, $context, $previous);

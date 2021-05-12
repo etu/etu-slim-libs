@@ -30,6 +30,9 @@ use Throwable;
  */
 final class NotFoundException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 404, LogLevel::INFO, $context, $previous);

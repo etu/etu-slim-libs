@@ -30,6 +30,9 @@ use Throwable;
  */
 final class BadRequestException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 400, LogLevel::INFO, $context, $previous);

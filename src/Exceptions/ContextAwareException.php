@@ -34,8 +34,15 @@ use Throwable;
 abstract class ContextAwareException extends Exception
 {
     private string $logLevel;
+
+    /**
+     * @var array<string, mixed> $context
+     */
     private array $context;
 
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(
         string $message,
         int $code,
@@ -54,6 +61,9 @@ abstract class ContextAwareException extends Exception
         parent::__construct($processed['message'], $code, $previous);
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getContext(): array
     {
         $context = [

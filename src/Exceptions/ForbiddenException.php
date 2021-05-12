@@ -30,6 +30,9 @@ use Throwable;
  */
 final class ForbiddenException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 403, LogLevel::INFO, $context, $previous);

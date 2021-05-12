@@ -31,6 +31,9 @@ use Throwable;
  */
 final class DivisionByZeroException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 500, LogLevel::WARNING, $context, $previous);

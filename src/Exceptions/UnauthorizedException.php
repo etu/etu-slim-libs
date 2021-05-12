@@ -30,6 +30,9 @@ use Throwable;
  */
 final class UnauthorizedException extends ContextAwareException
 {
+    /**
+     * @param array<string, mixed> $context
+     */
     public function __construct(string $message, array $context = [], ?Throwable $previous = null)
     {
         parent::__construct($message, 401, LogLevel::NOTICE, $context, $previous);
